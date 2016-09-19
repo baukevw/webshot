@@ -54,6 +54,9 @@ module Webshot
         # Timeout
         sleep opts[:timeout] if opts[:timeout]
 
+        # Hide some Catawiki Specific stuff
+        page.find('.cw-flyin-button').click
+
         # Check response code
         status_code = page.driver.status_code.to_i
         unless valid_status_code?(status_code, allowed_status_codes)

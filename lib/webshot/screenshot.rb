@@ -55,7 +55,6 @@ module Webshot
         sleep opts[:timeout] if opts[:timeout]
 
         # Hide some Catawiki Specific stuff
-        puts '--------------------------------------'
         page.execute_script('$("#registration_modal_box").hide();$(".cw-flyin-bg").hide();$("body").css("overflow", "auto");')
 
         # Check response code
